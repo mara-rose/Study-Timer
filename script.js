@@ -30,6 +30,8 @@ function toggleTime() {
       if (TimerData.leftTime > 0) {
         TimerData.leftTime--;
         updateDisplay();
+        TimerData.note = 'you\'re building momentum, don\'t stop now !';
+        noteElement.innerHTML = TimerData.note;
       } else {
         clearInterval(intervalId);
         TimerData.note = 'Time to take a Break !!'
@@ -44,9 +46,8 @@ function toggleTime() {
   }
   else {
     clearInterval(intervalId);
-    pauseElement.innerText = 'Resume'
+    pauseElement.innerText = 'Resume';
     TimerData.isPaused = false;
-
   }
   localStorage.setItem('data', JSON.stringify(TimerData));
 }
@@ -55,8 +56,8 @@ function resetTimer() {
   TimerData.leftTime = 1800;
   clearInterval(intervalId);
   TimerData.isPaused = false;
-  pauseElement.innerText = 'Start'
-  TimerData.note = 'you\'re building momentum, don\'t stop now !'
+  pauseElement.innerText = 'Start';
+  TimerData.note = 'Let\'s Go ';
   noteElement.innerHTML = TimerData.note;
   updateDisplay();
   localStorage.setItem('data', JSON.stringify(TimerData));
