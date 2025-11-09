@@ -5,6 +5,16 @@ const noteElement = document.querySelector('.js-note');
 const pauseElement = document.querySelector('.js-pause-button');
 const timeRealElement = document.querySelector('.js-time-real');
 
+document.querySelector('.js-click-start')
+  .addEventListener('click', () => {
+    toggleTime();
+  });
+
+document.querySelector('.js-click-reset')
+  .addEventListener('click', () => {
+    resetTimer();
+  })
+
 function realTime() {
   const timeNow = new Date();
   let hour = timeNow.getHours();

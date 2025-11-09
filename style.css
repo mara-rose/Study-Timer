@@ -1,6 +1,6 @@
 
     body{
-      background-image: url('téléchargement (1).jpg');
+      background-image: url('imges/background.jpg');
       background-size: cover;
       display: flex;
       flex-direction: column;
