@@ -22,7 +22,7 @@ function realTime() {
   let second = timeNow.getSeconds();
   let PmAm = (hour >= 12) ? 'PM' : 'AM'
   hour = hour % 12 || 12;
-  timeRealElement.innerHTML = `${('0' + hour).slice(-2)}:${('0' + minute).slice(-2)}:${('0' + second).slice(-2)} ${PmAm}`;
+  timeRealElement.innerHTML = `${('0' + hour).slice(-2)}:${('0' + minute).slice(-2)} : ${('0' + second).slice(-2)} ${PmAm}`;
 }
 realTime();
 setInterval(realTime, 1000);
@@ -30,7 +30,7 @@ setInterval(realTime, 1000);
 function updateDisplay() {
   let minutes = Math.floor(TimerData.leftTime / 60);
   let seconds = TimerData.leftTime % 60;
-  timeDisplay.innerHTML = `${('0' + minutes).slice(-2)}:${('0' + seconds).slice(-2)}`;
+  timeDisplay.innerHTML = `${('0' + minutes).slice(-2)} : ${('0' + seconds).slice(-2)}`;
   localStorage.setItem('data', JSON.stringify(TimerData));
 }
 

@@ -1,13 +1,10 @@
 
     body{
-      background-image: url('imges/background.jpg');
-      background-size: cover;
+      background-image: url('imges/backgroundPurple.jpg');
       display: flex;
       flex-direction: column;
-      justify-content: start;
-      row-gap: 50px;
+      row-gap: 30px;
       align-items: center;
-      height: 600px;
       font-family: 'Share Tech';
       color: rgb(164, 37, 238);
     }
@@ -15,7 +12,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: 15px;
+      row-gap: 30px;
     }
     .time-real{
       font-size: 40px;   
@@ -28,23 +25,32 @@
       margin: 0;
     }
     .start-button{
+      font-family: 'Share Tech';
       background-color:rgb(164, 37, 238) ;
       color: white;
       border: none;
       padding: 10px 30px;
       border-radius: 20px;
-      font-size: 18px;
+      font-size: 20px;
       cursor: pointer;
     }
 
     .reset-button,
     .setting-button{
       background-color:rgb(164, 37, 238) ;
-      padding: 5px 10px;
-      border-radius: 20px;
+      padding: 10px 15px;
+      border-radius: 25px;
       border: none;
     }
     .row-button{
       display: flex;
       column-gap: 15px;
+      align-items: center;
+      position: relative;
+    }
+
+    .gif{
+      position: absolute;
+      width: 200px;
+      left: 470px;
     }
